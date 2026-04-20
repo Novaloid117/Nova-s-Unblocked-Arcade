@@ -25,8 +25,20 @@
   </head>
   <body>
     <div id="root">
-      <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #121214; color: white; font-family: sans-serif;">
-        <p>Loading ArcadeX...</p>
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; background-color: #121214; color: white; font-family: sans-serif; text-align: center; padding: 20px;">
+        <h1 style="color: #ff3e81; margin-bottom: 20px;">Still Seeing Local Code?</h1>
+        <p style="max-width: 600px; line-height: 1.6; opacity: 0.8;">
+          If you are seeing this message, it means GitHub is still trying to run your <strong>raw source code</strong> instead of the <strong>built website</strong>.
+        </p>
+        <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; margin-top: 20px; border: 1px solid rgba(255,255,255,0.1);">
+          <p style="font-weight: bold; margin-bottom: 10px;">To fix this instantly:</p>
+          <ol style="text-align: left; display: inline-block;">
+            <li>Go to your GitHub Repository <strong>Settings</strong>.</li>
+            <li>Click <strong>Pages</strong> on the left.</li>
+            <li>Change "Source" to <strong>GitHub Actions</strong>.</li>
+          </ol>
+        </div>
+        <p style="margin-top: 20px; font-size: 12px; opacity: 0.5;">Loading ArcadeX Assets...</p>
       </div>
     </div>
     <script type="module" src="src/main.js" onerror="console.error('Failed to load src/main.js. Ensure you have run npm run build and are looking at the dist folder, or that the path is correct.')"></script>
