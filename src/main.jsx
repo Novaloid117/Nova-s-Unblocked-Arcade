@@ -1,6 +1,6 @@
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
-import App from './App'; // Removing extension for better resolution across environments
+import App from './App';
 import './index.css';
 
 console.log('ArcadeX Kernel Initializing...');
