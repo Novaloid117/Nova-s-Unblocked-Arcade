@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>ArcadeX - Unblocked Games</title>
+    <script>
+      // Diagnostic tool to help find why the page isn't loading
+      window.onerror = function(msg, url, lineNo, columnNo, error) {
+        var root = document.getElementById('root');
+        if (root) {
+          root.innerHTML = '<div style="padding: 40px; color: #ff3e81; font-family: sans-serif; background: #121214; min-height: 100vh;">' +
+            '<h1 style="font-size: 24px; margin-bottom: 16px;">Runtime Error</h1>' +
+            '<p style="opacity: 0.8; margin-bottom: 24px;">' + msg + '</p>' +
+            '<div style="font-size: 12px; opacity: 0.5;">' +
+            '<p>URL: ' + url + '</p>' +
+            '<p>Line: ' + lineNo + ' Column: ' + columnNo + '</p>' +
+            '</div>' +
+            '<p style="margin-top: 32px; font-size: 14px; color: white;">If you are seeing this on GitHub Pages, make sure you ran <b>npm run build</b> and uploaded the <b>dist</b> folder.</p>' +
+            '</div>';
+        }
+        return false;
+      };
+    </script>
   </head>
   <body>
     <div id="root">
@@ -11,7 +29,7 @@
         <p>Loading ArcadeX...</p>
       </div>
     </div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="src/main.jsx" onerror="console.error('Failed to load src/main.jsx.')"></script>
   </body>
 </html>
 

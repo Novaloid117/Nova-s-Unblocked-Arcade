@@ -1,16 +1,27 @@
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
-import App from './App.jsx';
+import App from './App'; // Removing extension for better resolution across environments
 import './index.css';
+
+console.log('ArcadeX Kernel Initializing...');
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
-  console.log('Mounting Nova Arcade App...');
-  createRoot(rootElement).render(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  );
+  try {
+    console.log('Target root found. Mounting application...');
+    createRoot(rootElement).render(
+      <StrictMode>
+        <App />
+      </StrictMode>,
+    );
+    console.log('Mount call completed.');
+  } catch (err) {
+    console.error('Mounting failed:', err);
+    rootElement.innerHTML = `<div style="color: #ff3e81; padding: 20px;">
+      <h1>Mounting Error</h1>
+      <pre>${err.message}</pre>
+    </div>`;
+  }
 } else {
-  console.error('Root element not found! Ensure <div id="root"></div> exists in index.html');
+  console.error('CRITICAL: Root element not found in DOM.');
 }
