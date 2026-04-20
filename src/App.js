@@ -1,8 +1,8 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import GameGrid from './components/GameGrid';
-import GameView from './components/GameView';
+import Layout from './components/Layout.js';
+import GameGrid from './components/GameGrid.js';
+import GameView from './components/GameView.js';
 import gamesData from './data/games.json';
 import { motion } from 'motion/react';
 import { cn } from './lib/utils';
