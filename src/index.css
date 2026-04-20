@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-bg: #121214;
+  --color-card: #1e1e24;
+  --color-accent-pink: #ff3e81;
+  --color-accent-green: #4ade80;
+  --color-accent-amber: #fbbf24;
+}
+
+body {
+  @apply bg-bg text-white font-sans antialiased;
+}
+
+.vibrant-card {
+  @apply bg-card rounded-[24px] p-3 border-2 border-transparent transition-all duration-200;
+}
+
+.vibrant-card:hover {
+  @apply border-accent-green;
+}
+
+.vibrant-hero {
+  @apply rounded-[32px] overflow-hidden bg-linear-to-br from-[#ff3e81] to-[#7e22ce] shadow-[0_20px_40px_rgba(0,0,0,0.4)];
+}
+
+.category-btn {
+  @apply w-full text-left p-3.5 rounded-[16px] bg-card font-bold text-sm transition-transform active:scale-95;
+}
+
+.category-btn.active {
+  @apply bg-accent-pink shadow-[0_0_15px_rgba(255,62,129,0.3)];
+}
+
+.stats-pill {
+  @apply bg-accent-amber text-[#121214] px-2 py-0.5 rounded-[6px] font-black text-[10px];
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full border-2 border-bg hover:bg-white/20;
+}
