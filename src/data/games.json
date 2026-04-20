@@ -6,5 +6,22 @@
     "thumbnail": "https://i.ibb.co/rK2XnWF8/DDLC-logo.jpg",
     "iframeUrl": "./games/ddlc/index.html",
     "description": "The acclaimed psychological horror visual novel mod, now playable directly in your browser."
+  },
+  {
+    "id": "bitlife",
+    "title": "BitLife",
+    "category": "Simulator",
+    "thumbnail": "https://i.ibb.co/fdRSPx9b/bitlife-logo.png",
+    "iframeUrl": "./games/bitlife/index.html",
+    "aspectRatio": "9/16",
+    "description": "How will you live your BitLife? Will you try to make all the right choices in an attempt to become a model citizen sometime before you die?"
+  },
+  {
+    "id": "class-of-09",
+    "title": "Class of '09",
+    "category": "Visual Novel",
+    "thumbnail": "https://i.ibb.co/DDZKf5m4/Class-of-09-logo.png",
+    "iframeUrl": "https://lessons.mrwheeler.uk/resources/semag/co09/index.html",
+    "description": "The anti-visual novel. Experience the high school social simulation that redefined the genre with its biting wit and dark comedy."
   }
 ]

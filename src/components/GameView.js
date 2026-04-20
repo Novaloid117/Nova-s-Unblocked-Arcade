@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import gamesData from '../data/games.json';
 import { ChevronLeft, Maximize2, RotateCcw } from 'lucide-react';
+import { cn } from '../lib/utils';
 
 const games = gamesData;
 
@@ -45,10 +46,18 @@ export default function GameView() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
-        <div className="lg:col-span-3">
-          <div className="rounded-[32px] overflow-hidden bg-black shadow-2xl border-2 border-white/5">
-            <div className="aspect-video w-full bg-[#1e1e24] flex items-center justify-center">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-4 items-start">
+        <div className={cn(
+          "lg:col-span-3 flex justify-center",
+          game.aspectRatio === '9/16' && "lg:col-span-2 lg:col-start-1 lg:justify-start"
+        )}>
+          <div className={cn(
+            "overflow-hidden bg-black shadow-2xl border-2 border-white/5 transition-all duration-500",
+            game.aspectRatio === '9/16' 
+              ? "aspect-[9/16] w-full max-w-[400px] rounded-[48px] border-8 border-[#2e2e38] ring-4 ring-black/50" 
+              : "aspect-video w-full rounded-[32px]"
+          )}>
+            <div className="h-full w-full bg-[#1e1e24] flex items-center justify-center">
               <iframe
                 key={key}
                 src={game.iframeUrl}
@@ -61,7 +70,10 @@ export default function GameView() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className={cn(
+          "flex flex-col gap-6",
+          game.aspectRatio === '9/16' && "lg:col-span-2"
+        )}>
           <div className="vibrant-card p-6 bg-[#1e1e24]">
             <span className="mb-2 block text-[10px] font-bold uppercase tracking-widest text-accent-pink">
               {game.category}

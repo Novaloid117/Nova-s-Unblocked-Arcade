@@ -25,9 +25,6 @@ const GameCard = ({ game }) => {
           </h3>
           <div className="flex items-center justify-between">
              <span className="text-xs font-medium text-white/40 uppercase tracking-wide">{game.category}</span>
-             <span className="stats-pill">
-                {(Math.random() * 2 + 7.5).toFixed(1)}
-             </span>
           </div>
         </div>
       </div>
