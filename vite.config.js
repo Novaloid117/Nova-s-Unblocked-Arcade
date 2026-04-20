@@ -7,6 +7,18 @@ export default defineConfig(({mode}) => {
   return {
     base: './', // Ensures relative paths for GitHub Pages
     plugins: [react(), tailwindcss()],
+    esbuild: {
+      loader: 'jsx',
+      include: /src\/.*\.js$/,
+      exclude: [],
+    },
+    optimizeDeps: {
+      esbuildOptions: {
+        loader: {
+          '.js': 'jsx',
+        },
+      },
+    },
     resolve: {
       alias: {
         '@': path.resolve(process.cwd(), '.'),
