@@ -16,7 +16,14 @@
             '<p>URL: ' + url + '</p>' +
             '<p>Line: ' + lineNo + ' Column: ' + columnNo + '</p>' +
             '</div>' +
-            '<p style="margin-top: 32px; font-size: 14px; color: white;">If you are seeing this on GitHub Pages, make sure you ran <b>npm run build</b> and uploaded the <b>dist</b> folder.</p>' +
+            '<div style="margin-top: 32px; font-size: 14px; color: white; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">' +
+            '<p style="font-weight: bold; margin-bottom: 10px;">Deployment Instructions:</p>' +
+            '<p style="margin-bottom: 8px;">If you are seeing this on Netlify or Vercel, ensure your settings are:</p>' +
+            '<ul style="margin-left: 20px; opacity: 0.8;">' +
+            '<li><b>Build Command:</b> npm run build</li>' +
+            '<li><b>Publish Directory:</b> dist</li>' +
+            '</ul>' +
+            '</div>' +
             '</div>';
         }
         return false;
@@ -41,7 +48,7 @@
         <p style="margin-top: 20px; font-size: 12px; opacity: 0.5;">Loading Nova's Arcade Assets...</p>
       </div>
     </div>
-    <script type="module" src="src/main.js" onerror="console.error('Failed to load src/main.js. Ensure you have run npm run build and are looking at the dist folder, or that the path is correct.')"></script>
+    <script type="module" src="src/main.jsx" onerror="console.error('Failed to load src/main.jsx. Ensure you have run npm run build and are looking at the dist folder, or that the path is correct.')"></script>
   </body>
 </html>
 
